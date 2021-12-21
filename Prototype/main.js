@@ -22,7 +22,7 @@ function Calculate(A,B,operation){
 
 
 // Presentation
-function ClickNumber(number){
+function Cliquezsurnombre(number){
     if(A == undefined){
         if(AString == undefined) AString = '';
         AString += number;
