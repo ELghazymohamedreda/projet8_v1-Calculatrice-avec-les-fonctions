@@ -1,69 +1,58 @@
-*{
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
     padding: 0;
     margin: 0;
-    outline: none;
-}
-body{
-    max-width: 100vw;
-    text-align: center;
-    height: 100vh;
-    display: flex;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+  }
+  
+  .calculator-grid {
+    display: grid;
     justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-}
-.calculatrice{
-    width: 340px;
-    height: 470px;
-    background-color: rgb(31, 31, 31);
-    border-radius: 7px;
-}
-input[type="texte"]{
-     width:270px;
-     height:60px;
-     margin-top:40px;
-     border-radius: 2px;
-     background-color: gainsboro;
-     border: 1px solid gray;
-     color:#000;
-     font-size: 25px;
-     font-weight: bold;
-     text-align: right;
-     padding-right: 20px;
-}
-.ecran{
-    background-color: rgb(19, 19, 19);
-    height: 140px;
-}
-form .button{
-    width: 300px;
-    margin: 0px 20px 0px 20px;
-    padding: 10px 0px;
-}
-input[type="button"]{
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    border-radius:  5px;
-    margin: 5px;
-    font-size: 22px;
-    line-height: 55px;
-    border: 1px solid rgb(77, 77, 77);
-}
-input[type="button"]:hover{
-    transition: 0.4s;
-    background-color: rgb(214, 214, 214);
-}
-input #C{
-    background-color: rgb(230, 0, 0);
-    border: 1px solid rgb(177, 177, 177);
-    color: #fff;
-}
-input#result{
-    width: 250px;
-    margin: 10;
-    font-size:  25px;
-    color: #fff;
-    background-color: rgb(2, 57, 108);
-    font-weight:bold;
-}
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
