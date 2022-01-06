@@ -1,10 +1,10 @@
-// Variables
+
 let A,B,solution,operation;
 let AString, BString;
 
 
 
-// Job
+
 function Calculate(A,B,operation){
     let solution = undefined;
     switch (operation) {
@@ -21,8 +21,7 @@ function Calculate(A,B,operation){
 }
 
 
-// Presentation
-function Cliquezsurnombre(number){   
+function Cliquezsurlenombre(number){   
     if(A == undefined){
         if(AString == undefined) AString = '';
         AString += number;
@@ -44,26 +43,20 @@ function Afficher(number){
 
         display.value = number;
     }else{
-        if(AString != undefined)
-        display.value += AString 
-        if(operation != undefined)
-        display.value += operation     
-        if(BString != undefined)
-        display.value += BString 
-
-        }
- 
-   
+        if(AString!=undefined)
+        display.value += AString
+        if(operation!=undefined)
+        display.value+= operation
+        if(BString!=undefined)
+        display.value+=BString
+    }
 }
-
 
 function Operation(operationParam){
     if(operation == undefined){
         operation = operationParam;
         A = parseFloat(AString);
         Afficher();
-    }else{
-        alert(" You have already chosen the operation  " + operation);
     }
 }
 
@@ -74,7 +67,7 @@ function Equal(){
     Afficher(solution);
 }
 
-function Init(){
+function init(){
     A = undefined;
     B = undefined;
     AString = undefined;
