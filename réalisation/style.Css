@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(112, 111, 111);
+    background-color: #D9D7F1;
 }
 
 
@@ -28,25 +28,25 @@ input{
     width: 300px;
     height: 30px;
     border-radius: 10px;
-   border: 3px solid #072227;
-   background-color: #C0D8C0;
+   border: 3px solid #D6E5FA;
+   background-color: #ffffff;
 }
 button{
     width: 100px;
     height: 40px;
-    border: 1px solid rgb(50, 118, 156);
+    border: 1px solid #7C99AC;
     border-radius: 60px;
     margin-bottom: 10px;
     font-size: 30px;
-    background-color: rgb(50, 118, 156);
+    background-color: #7C99AC;
     color: #fff;
 }
 button:hover{
-    background-color: black;
+    background-color: #D6E5FA;
 }
 .C{
     margin-left: 105px;
-    background-color: rgb(30, 58, 95);
+    background-color: #7C99AC;
 }
 
 @media only screen and(min-width:700px) {
